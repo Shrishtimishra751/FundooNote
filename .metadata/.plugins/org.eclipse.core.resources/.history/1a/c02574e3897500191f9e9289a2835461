@@ -1,0 +1,32 @@
+package com.bridgelabz.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.bridgelabz.model.User;
+
+public interface UserService {
+	public String login(User user);
+
+	public User update(String token, User user);
+
+	public User userRegistration(User user);
+
+	public String encryptedPassword(User user);
+
+	public int tokenVerification(String token);
+
+	String jwtToken(String subject, int id);
+	
+	public boolean delete(String token);
+	
+	public List <User>findbyemailId(String email);
+
+	public Optional<User> findUserByEmail(String userEmail);
+
+	public User getUserInfoByEmail(String email);
+
+
+
+
+}

@@ -1,0 +1,26 @@
+package com.bridgelabz.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+
+public class LoginController {
+	@Autowired
+	UserService userservice;
+
+//find
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String getUserByLogin(@RequestBody User user) {
+
+		/*
+		 * int result=userservice.login(user); if(result>0) {
+		 * System.out.println(user.getFirstName()); return
+		 * "Welcome"+user.getFirstName(); } jwtToken =
+		 * Jwt.builder().setSubject(user.getUserName()).claim( "user").setIssuedAt(new
+		 * Date()) .signWith(SignatureAlgorithm.HS256, "secretkey").compact();
+		 * 
+		 * else return "Invalid User Details";
+		 */
+		return userservice.login(user);
+	}
+}

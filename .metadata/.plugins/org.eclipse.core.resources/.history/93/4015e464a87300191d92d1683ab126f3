@@ -1,0 +1,9 @@
+package com.bridgelabz.service;
+
+public class UserService {
+	public User userReg(User user);
+	//public int login(User user);
+	public String login(User user);
+	public String securePassword(User user);
+	public User saveUser(User user);
+}

@@ -1,0 +1,27 @@
+package com.bridgelabz.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Details {
+	@Id
+	@Column(name = "UserID")
+	private long id;
+
+	@Column(name = "NAME")
+	private String firstname;
+
+	@Column(name = "NAME")
+	private String lastname;
+	
+	@Column(name = "EMAILID")
+	private String emailid;
+	
+	@Column(name = "PASSWORD")
+	private String password;
+	
+	@Column(name = "MOBILENO")
+	private String mobileNo;
+}
